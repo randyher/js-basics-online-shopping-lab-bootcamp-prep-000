@@ -40,12 +40,14 @@ function total() {
 }
 
 function removeFromCart(item) {
-  for (var z=1;z<cart.length;z++);
-  if (cart[1].itemName===item){
+  for (var z=0;z<cart.length;z++){
+  if (cart[z].itemName==item){
   cart.splice(z,1);
   return cart
-  } else{
+  }
+   else{
   return `That item is not in your cart.`
+    }
   }
 }
 
