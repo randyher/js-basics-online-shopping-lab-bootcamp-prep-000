@@ -50,5 +50,13 @@ return `That item is not in your cart.`
 }
 
 function placeOrder(cardNumber) {
-  // write your code here
+  var price=total()
+  if (cardNumber==0){
+    return `Sorry, we don't have a credit card of file for you.`
+  } else{
+    for (var i=0; cart.length>0; i++){
+      cart.pop(i,1)
+    }
+    return `Your total is $${price}, which will be charged to the card ${cardNumber}.`
+  }
 }
