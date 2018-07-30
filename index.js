@@ -51,7 +51,7 @@ return `That item is not in your cart.`
 
 function placeOrder(cardNumber) {
   var price=total()
-  if (cardNumber==0){
+  if (cardNumber==null){
     return `Sorry, we don't have a credit card of file for you.`
   } else{
     for (var i=0; cart.length>0; i++){
